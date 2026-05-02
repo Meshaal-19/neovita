@@ -3,7 +3,8 @@ import google.generativeai as genai
 from PIL import Image
 import random
 
-GOOGLE_API_KEY = ""
+import os
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 chat_model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
